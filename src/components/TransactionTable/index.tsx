@@ -1,29 +1,31 @@
 import { useEffect } from "react";
+import { api } from "../../services/api";
 import { Container } from "./styles";
 
 export function TransactionTable() {
     useEffect(() => {
-        fetch('http://localhost:3000/api/transactions')
-            .then(response => response.json())
-                .then(data => console.log(data));
+        api.get('transactions')
+            .then(response => console.log(response.data));
     }, []);
 
     return(
         <Container>
             <table>
                 <thead>
-                    <th>
-                        Titulo
-                    </th>
-                    <th>
-                        Valor
-                    </th>
-                    <th>
-                        Categria
-                    </th>
-                    <th>
-                        Data
-                    </th>
+                    <tr>
+                        <th>
+                            Titulo
+                        </th>
+                        <th>
+                            Valor
+                        </th>
+                        <th>
+                            Categria
+                        </th>
+                        <th>
+                            Data
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>

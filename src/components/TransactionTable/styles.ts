@@ -11,6 +11,7 @@ export const Container = styled.div`
             color: var(--text-body);
             font-weight: 400;
             padding: 1rem 2rem;
+            text-align: left;
         }
 
         td {

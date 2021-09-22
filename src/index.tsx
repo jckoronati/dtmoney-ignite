@@ -21,7 +21,7 @@ createServer({
         },
         {
           id: 2,
-          title: 'Banho e tosa do Doguinho',
+          title: 'Banho e tosa do doguinho',
           type: 'withdraw',
           category: 'Pet',
           amount: 450,
